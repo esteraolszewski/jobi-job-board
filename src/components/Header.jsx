@@ -66,7 +66,37 @@ const BlobD = styled.div`
     border-radius: 50%;
 
 `
+const MenuContainer = styled.div`
+    display: flex;
+`
+const DropdownContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+const Label = styled.label`
+    color: grey;
+`
+const Select = styled.select`
+    
+`
+const InputContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+const Input = styled.input.attrs({type: 'search', value: 'Search'})`
+    
+`
 
+const Button = styled.button`
+   
+`
+const Upload = styled.button`
+    border: none;
+    background: none;
+    font-size: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+`
 
 const Header = () => {
     return (
@@ -78,9 +108,33 @@ const Header = () => {
 
             <Slogan>Find your job without any hassle.</Slogan>
             <Subtitle>Jobs & Job search. Find jobs in global. Executive jobs & work.</Subtitle>
-   
-        
+            <MenuContainer>
+                <DropdownContainer>
+                        <Label>Job Categories</Label>
+                    <Select>
+                        <option>Designer</option>
+                        <option>Accounting</option>
+                        <option>Marketing</option>
+                    </Select>
+                </DropdownContainer>
+                <DropdownContainer>
+                        <Label>Location</Label>
+                    <Select>
+                        <option>California, CA</option>
+                        <option>London, UK</option>
+                        <option>Barcelona, Spain</option>
+                    </Select>
+                </DropdownContainer>
+                <InputContainer>
+                    <Label>Keywords or Title</Label>
+                    <Input/>
+                </InputContainer>
+                <Button>Search</Button>
+            </MenuContainer>
+
+            <Upload>Upload your cv</Upload>
         </Container>
+          
     )
 }
 
