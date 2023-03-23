@@ -85,7 +85,7 @@ const Numbers = () => {
                     <Paragraph>Commonly used in the graphic, print publishing industries for previewing visual mockups. Limited social discrimination.</Paragraph>
 
                     {/* Fix Explore */}
-                    <Explore>Find your job. Explore all ></Explore>
+                    <Explore>Find your job. Explore all</Explore>
                 </Text>
             </Box>
                 <Freelancer>

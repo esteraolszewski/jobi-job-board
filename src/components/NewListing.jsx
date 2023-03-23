@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
     margin: 80px;
     width: 80%;
+    
 `
 const Top = styled.div`
     display: flex;
@@ -27,6 +28,7 @@ const Listings = styled.div`
 const Jobs = styled.div`
     display: flex;
     justify-content: space-evenly;
+    padding: 20px;
 `
 const First = styled.div`
     display: flex;
@@ -101,12 +103,12 @@ const NewListing = () => {
         <Container>
             <Top>
                 <Header>New job listing</Header>
-                <Explore>Explore all jobs ></Explore>
+                <Explore>Explore all jobs</Explore>
             </Top>
             <Listings>
                 <Jobs>
                     <First>
-                        <Image></Image>
+                        <Image>IMG</Image>
                         <Name>Developer & expert in java c++</Name>
                     </First>
                     <Second>
@@ -118,13 +120,13 @@ const NewListing = () => {
                         <Category>Developer, Coder</Category>
                     </Third>
                     <Fourth>
-                        <Icon></Icon>
+                        <Icon>ICON</Icon>
                         <Button>APPLY</Button>
                     </Fourth>
                 </Jobs>
                 <Jobs>
                     <First>
-                        <Image></Image>
+                        <Image>IMG</Image>
                         <Name>Animator & Expert in maya 3D</Name>
                     </First>
                     <Second>
@@ -136,13 +138,13 @@ const NewListing = () => {
                         <Category>Finance, Accounting</Category>
                     </Third>
                     <Fourth>
-                        <Icon></Icon>
+                        <Icon>ICON</Icon>
                         <Button>APPLY</Button>
                     </Fourth>
                 </Jobs>
                 <Jobs>
                     <First>
-                        <Image></Image>
+                        <Image>IMG</Image>
                         <Name>Marketing Specialist in SEO & SMM</Name>
                     </First>
                     <Second>
@@ -154,13 +156,13 @@ const NewListing = () => {
                         <Category>Design, Artist</Category>
                     </Third>
                     <Fourth>
-                        <Icon></Icon>
+                        <Icon>ICON</Icon>
                         <Button>APPLY</Button>
                     </Fourth>
                 </Jobs>
                 <Jobs>
                     <First>
-                        <Image></Image>
+                        <Image>IMG</Image>
                         <Name>Developer & expert in java c++</Name>
                     </First>
                     <Second>
@@ -172,13 +174,13 @@ const NewListing = () => {
                         <Category>Application, Dev</Category>
                     </Third>
                     <Fourth>
-                        <Icon></Icon>
+                        <Icon>ICON</Icon>
                         <Button>APPLY</Button>
                     </Fourth>
                 </Jobs>
                 <Jobs>
                     <First>
-                        <Image></Image>
+                        <Image>IMG</Image>
                         <Name>Lead & Product Designer</Name>
                     </First>
                     <Second>
@@ -190,7 +192,7 @@ const NewListing = () => {
                         <Category>Finance, Business</Category>
                     </Third>
                     <Fourth>
-                        <Icon></Icon>
+                        <Icon>ICON</Icon>
                         <Button>APPLY</Button>
                     </Fourth>
                 </Jobs>

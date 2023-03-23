@@ -45,7 +45,7 @@ const Categories = () => {
         <Container>
             <Top>
                 <Header>Most Demanding Categories.</Header>
-                <Explore>Explore all fields ></Explore>
+                <Explore>Explore all fields</Explore>
             </Top>
             <Boxes>
                 <Category>
