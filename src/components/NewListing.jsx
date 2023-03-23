@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    margin: 80px;
-    width: 80%;
-    
+    padding: 40px 0 40px 0;
 `
 const Top = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 `
 const Header = styled.h2`
@@ -21,14 +19,15 @@ const Explore = styled.a`
 const Listings = styled.div`
     display: flex;
     flex-direction: column;
-    width: 80%;
+    justify-content: center;
+    margin: 0 345px;
     border: lightgray 1px solid;
     border-radius: 10px;
 `
 const Jobs = styled.div`
     display: flex;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 10px;
 `
 const First = styled.div`
     display: flex;
@@ -78,7 +77,7 @@ const Fourth = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 20%;
+    width: 10%;
     border-bottom: lightgray 1px solid;
 
 `
@@ -88,13 +87,14 @@ const Icon = styled.div`
 const Button = styled.button`
     color: white;
     background-color: #00BF58;
+    border: none;
     padding: 10px;
-    height: 50px;
+    height: 40px;
     cursor: pointer;
 `
 const ClickHere = styled.p`
     background-color: lightgray;
-    width: 30%;
+    width: 25%;
     text-align: center;
 `
 
