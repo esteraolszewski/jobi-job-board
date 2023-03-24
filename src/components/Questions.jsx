@@ -32,6 +32,11 @@ const Open = styled.div`
     padding: 5px;
 
 `
+const Bottom = styled.p`
+    border: 1px solid #00BF58;
+    width: 320px;
+    text-align: center;
+`
 
 const Questions = () => {
     return (
@@ -59,6 +64,7 @@ const Questions = () => {
                     <Open>+</Open>
                 </Box>
             </List>
+            <Bottom>Don't find the answer? We can help. Click here</Bottom>
         </Container>
     );
 };
