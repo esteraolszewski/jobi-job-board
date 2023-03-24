@@ -22,6 +22,8 @@ const Box = styled.div`
     align-items: center;
     padding: 10px;
     margin: 20px;
+    border-bottom: 1px #EBEBEB solid;
+    
 `
 const Subtitle = styled.h3`
     font-size: 20px;
@@ -31,6 +33,10 @@ const Open = styled.div`
     border-radius: 50%;
     padding: 5px;
 
+`
+const CenterIt = styled.div`
+    display: flex;
+    justify-content: center;
 `
 const Bottom = styled.p`
     border: 1px solid #00BF58;
@@ -64,7 +70,9 @@ const Questions = () => {
                     <Open>+</Open>
                 </Box>
             </List>
-            <Bottom>Don't find the answer? We can help. Click here</Bottom>
+            <CenterIt>
+                <Bottom>Don't find the answer? We can help. Click here</Bottom>
+            </CenterIt>
         </Container>
     );
 };

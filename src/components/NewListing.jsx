@@ -92,6 +92,10 @@ const Button = styled.button`
     height: 40px;
     cursor: pointer;
 `
+const CenterIt = styled.div`
+    display: flex;
+    justify-content: center;
+`
 const ClickHere = styled.p`
     background-color: lightgray;
     width: 25%;
@@ -197,8 +201,9 @@ const NewListing = () => {
                     </Fourth>
                 </Jobs>
             </Listings>
-
-            <ClickHere>Do you want to post a job for your company? <b>We can help.</b> Click here</ClickHere>
+            <CenterIt>
+                <ClickHere>Do you want to post a job for your company? <b>We can help.</b> Click here</ClickHere>  
+            </CenterIt>
         </Container>
     );
 };
