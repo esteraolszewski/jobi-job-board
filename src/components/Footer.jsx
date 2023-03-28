@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { logo } from "../data";
+import logo from "../../public/images/Logo.jpg";
+
 
 const Container = styled.div`
     padding: 40px 0 40px 0;
@@ -129,9 +130,8 @@ const Footer = () => {
             </Top>
             <Middle>
                 <LogoSection>
-                    {logo.map(item => (
-                        <Image src={item.src} key={item.id}/>
-                    ))}
+                    <Image src={logo}/>
+                   
                     <Email>jobisupport@company.com</Email>
                     <Socials>1 2 3</Socials>
                 </LogoSection>

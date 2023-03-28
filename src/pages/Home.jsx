@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 import Header from '../components/Header';
 import Categories from '../components/Categories';
 import Numbers from '../components/Numbers';
@@ -12,7 +11,6 @@ import Footer from '../components/Footer';
 const Home =() => {
     return (
         <div>
-            <Navbar/>
             <Header/>
             <Categories/>
             <Numbers/>
