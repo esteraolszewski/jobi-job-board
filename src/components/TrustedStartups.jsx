@@ -1,12 +1,18 @@
 import styled from "styled-components";
+import logoOne from "../../src/images/mondaylogo.jpg";
+import logoTwo from "../../src/images/bobimage.jpg";
+
 
 const Container = styled.div`
-    padding: 40px 0 40px 0;
+    padding: 40px 0;
+    margin-bottom: 100px;
+    background-color: #F5F5F5;
 `
 const Top = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    gap: 85px;
 `
 const Header = styled.h2`
     font-size: 50px;
@@ -28,12 +34,13 @@ const Boxes = styled.div`
     gap: 20px;
 `
 const MondayBox = styled.div`
-    background-color: #00BF58;
+    background-color: #249F47;
     border-radius: 5%;
     width: 25%;
     padding: 50px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 `
 const ShipBox = styled.div`
     background-color: #755146;
@@ -42,11 +49,15 @@ const ShipBox = styled.div`
     padding: 50px;
     display: flex;
     flex-direction: column;
+    gap: 18px;
+
 `
-const ImageOne = styled.div`
+const ImageOne = styled.img`
+    width: 45%;
     
 `
-const ImageTwo = styled.div`
+const ImageTwo = styled.img`
+    width: 40%;
     
 `
 const Title = styled.h3`
@@ -56,6 +67,7 @@ const Title = styled.h3`
 const Name = styled.p`
     font-size: 15px;
     color: white;
+    margin-bottom: 33px;
 `
 const Line = styled.div`
     border-bottom: 1px white solid;
@@ -92,7 +104,7 @@ const TrustedStartups = () => {
             </Top>
             <Boxes>
                 <MondayBox>
-                    <ImageOne>IMG</ImageOne>
+                    <ImageOne src={logoOne}/>
                     <Title>"Seattle opera simplifies Performance planning with deski eSignature."</Title>
                     <Name><b>Rashed kabir,</b> Lead Designer</Name>
                     <Line></Line>
@@ -107,7 +119,8 @@ const TrustedStartups = () => {
                     </RatingContainer>
                 </MondayBox>
                 <ShipBox>
-                    <ImageTwo>IMG</ImageTwo>
+                    <ImageTwo src={logoTwo}/>
+
                     <Title>"How DocuSign CLM helps Celonis scale its global business."</Title>
                     <Name><b>Mark Joge,</b> Marketing Chief</Name>
                     <Line></Line>

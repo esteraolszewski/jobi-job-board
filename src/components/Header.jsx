@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import logo from "../../public/images/Logo.jpg";
-import img from '../../public/images/headeroption.jpg';
+import logo from "../../src/images/Logo.jpg";
+import img from '../../src/images/headeroption.jpg';
 import "../index.css";
 
 const Container = styled.div`
@@ -12,10 +12,10 @@ const Container = styled.div`
 `
 // NAVBAR STYLES
 const Wrapper = styled.div`
-    /* padding: 20px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 30px;
 `
 const Title = styled.img` 
     
@@ -43,7 +43,7 @@ const ItemB = styled.a`
     font-size: 17px;
     color: white;
     cursor: pointer;
-    border-radius: 35%;
+    border-radius: 35px;
     background-color: #00BF58;
     padding: 10px;
     width: 70px;
@@ -63,16 +63,18 @@ const Slogan = styled.h1`
     color: black;
     text-align: center;
     width: 843px;
+    margin: -110px 0 4px 0;
 `
 const Subtitle = styled.h2`
     font-size: 20px;
     color: #050C24;
+    margin-bottom: 70px;
 `
 
 const BlobA = styled.div`
     background-color: white;
-    width: 97.25px;
-    height: 72.48px;
+    width: 97px;
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,8 +86,8 @@ const BlobA = styled.div`
 `
 const BlobB = styled.div`
     background-color: white;
-    width: 90.25px;
-    height: 61.48px;
+    width: 85px;
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,57 +100,90 @@ const BlobB = styled.div`
 `
 const BlobC = styled.div`
     background-color: white;
-    width: 97.25px;
-    height: 72.48px;
+    width: 78px;
+    height: 59px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    transform: translate(-725px, 185px);
+    transform: rotate(10deg);
     border-radius: 50%;
+    top: 485px;
+    left: 230px;
 
 `
 const BlobD = styled.div`
     background-color: white;
-    width: 97.25px;
-    height: 72.48px;
+    width: 99px;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    transform: translate(725px, 185px);
+    transform: rotate(-8deg);
     border-radius: 50%;
-
+    top: 485px;
+    right: 230px;
 `
 const MenuContainer = styled.div`
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 50%;
+    height: 50px;
+    padding: 20px;
+    border-radius: 10px;
 `
 const DropdownContainer = styled.div`
     display: flex;
     flex-direction: column;
+    gap: 10px;
+   
 `
 const Label = styled.label`
     color: grey;
+    font-size: 15px;
 `
 const Select = styled.select`
-    
+    border: none;
+    background: none;
+    font-size: 15px;
+    cursor: pointer;
 `
 const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
+    gap: 10px;
+   
+
 `
 const Input = styled.input.attrs({type: 'search', value: 'Search'})`
-    
+    border: none;
+    font-size: 15px;
 `
 
 const Button = styled.button`
-   
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #00BF58;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
 `
 const Upload = styled.button`
     border: none;
     background: none;
     font-size: 15px;
-    text-decoration: underline;
+    color: white;
+    border-bottom: solid white 1px;
+    line-height: 2;
+    margin-top: 25px;
     cursor: pointer;
 `
 
@@ -174,10 +209,10 @@ const Header = () => {
 
             {/* HEADER */}
             <HeaderWrapper>
-                <BlobA><span>Business</span></BlobA>
-                <BlobB><span>Art</span></BlobB>
-                <BlobC>Design</BlobC>
-                <BlobD>Ui Design</BlobD>
+                <BlobA><span className="business">Business</span></BlobA>
+                <BlobB><span className="art">Art</span></BlobB>
+                <BlobC><span className="design">Design</span></BlobC>
+                <BlobD><span className="uidesign">Ui Design</span></BlobD>
 
                 <Slogan>Find your job without any hassle.</Slogan>
                 <Subtitle>Jobs & Job search. Find jobs in global. Executive jobs & work.</Subtitle>

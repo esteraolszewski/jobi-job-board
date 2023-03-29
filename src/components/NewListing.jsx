@@ -1,12 +1,18 @@
 import styled from "styled-components";
+import "../index.css";
+
 
 const Container = styled.div`
     padding: 40px 0 40px 0;
+    background-color: #F5F5F5;
+
 `
 const Top = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    gap: 450px;
+    margin-bottom: 30px;
 `
 const Header = styled.h2`
     font-size: 50px;
@@ -48,11 +54,12 @@ const Second = styled.div`
     flex-direction: column;
     width: 20%;
     border-bottom: lightgray 1px solid;
-
+    justify-content: center;
 `
 const Availability = styled.p`
     color: #00BF58;
     font-size: 10px;
+    margin-bottom: -10px;
 `
 const Date = styled.p`
     font-size: 15px;
@@ -63,11 +70,13 @@ const Third = styled.div`
     flex-direction: column;
     width: 20%;
     border-bottom: lightgray 1px solid;
-
+    justify-content: center;
 `
 const Location = styled.p`
     font-size: 10px;
     color: grey;
+    margin-bottom: -6px;
+
 `
 const Category = styled.p`
     font-size: 12px;
@@ -95,11 +104,13 @@ const Button = styled.button`
 const CenterIt = styled.div`
     display: flex;
     justify-content: center;
+    margin-top: 40px;
 `
 const ClickHere = styled.p`
     background-color: lightgray;
     width: 25%;
     text-align: center;
+    padding: 6px 10px;
 `
 
 const NewListing = () => {
@@ -202,7 +213,7 @@ const NewListing = () => {
                 </Jobs>
             </Listings>
             <CenterIt>
-                <ClickHere>Do you want to post a job for your company? <b>We can help.</b> Click here</ClickHere>  
+                <ClickHere>Do you want to post a job for your company? <span className="green"><b>We can help.</b> Click here</span></ClickHere>  
             </CenterIt>
         </Container>
     );

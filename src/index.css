@@ -1,4 +1,28 @@
-span {
+.business {
     transform: rotate(20deg);
    
+}
+
+.art {
+    transform: rotate(-12deg);
+        
+}
+
+.design {
+    transform: rotate(-10deg);
+        
+}
+
+.uidesign {
+    transform: rotate(8deg);
+        
+}
+
+.green {
+    color: #00BF58;
+}
+
+.click {
+    color: #00BF58;
+    text-decoration: underline;
 }

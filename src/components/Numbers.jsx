@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import img from "../../src/images/personlaptop.jpg";
+
 
 const Container = styled.div`
     display: flex;
@@ -6,31 +8,38 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
-
+    background-color: #F5F5F5;
 `
 const Box = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 50%;
     background-color: #755146;
     border-radius: 5%;
     position: relative;
 `
-const Image = styled.div`
+// const ImageBox = styled.div`
+//     width: 30%;
+    
+// `
+const Image = styled.img`
     width: 30%;
+    height: 100%;
+    object-fit: cover;
+    /* display: flex; */
 `
 const Text = styled.div`
     width: 30%;
     padding-bottom: 80px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 `
 const Header = styled.h2`
     font-size: 50px;
     color: white;
+    margin-bottom: 4px;
 `
 const Paragraph = styled.p`
     font-size: 20px;
@@ -40,14 +49,16 @@ const Explore = styled.p`
     font-size: 15px;
     color: white;
     border: white 1px solid;
+    width: 90%;
+    padding: 6px;
 `
 const Freelancer = styled.div`
-    background-color: #aafff5;
+    background-color: white;
     width: 190px;
-    height: 100px;
+    height: 110px;
     border-radius: 5px;
     position: absolute;
-    transform: translate(-70px, 95px);
+    transform: translate(-70px, 140px);
 `
 const P = styled.p`
     font-size: 15px;
@@ -71,6 +82,7 @@ const Payout = styled.div`
 `
 const Number = styled.h3`
     font-size: 50px;
+    margin: -2px 0;
 `
 const Words = styled.p`
     font-size: 20px;
@@ -79,7 +91,9 @@ const Numbers = () => {
     return (
         <Container>
             <Box>
-                <Image></Image>
+                {/* <ImageBox> */}
+                    <Image src={img}/>
+                {/* </ImageBox> */}
                 <Text>
                     <Header>Get the job of your dreams quickly.</Header>
                     <Paragraph>Commonly used in the graphic, print publishing industries for previewing visual mockups. Limited social discrimination.</Paragraph>

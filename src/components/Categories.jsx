@@ -1,20 +1,23 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    margin: 80px;
+    margin: 90px;
+
 `
 const Top = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 70px;
 `
 const Header = styled.h2`
-    font-size: 30px;
+    font-size: 40px;
     color: black;
 `
 const Explore = styled.a`
     color: #00BF58;
-    text-decoration: underline;
+    border-bottom: solid #00BF58 1px;
+    line-height: 2;
     cursor: pointer;
 `
 const Boxes = styled.div`
@@ -32,6 +35,11 @@ const Category = styled.div`
     padding: 10px;
     width: 210px;
     height: 244px;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        border-color: #00BF58;
+    }
 `
 const Name = styled.h3`
     font-size: 20px;

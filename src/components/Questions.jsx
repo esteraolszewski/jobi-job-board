@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import "../index.css";
+
 
 const Container = styled.div`
     
@@ -31,8 +33,16 @@ const Subtitle = styled.h3`
 const Open = styled.div`
     background-color: white;
     border-radius: 50%;
-    padding: 5px;
-
+    padding: 8px;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: #00B454;
+    }
 `
 const CenterIt = styled.div`
     display: flex;
@@ -42,6 +52,8 @@ const Bottom = styled.p`
     border: 1px solid #00BF58;
     width: 320px;
     text-align: center;
+    margin: 50px 0 90px 0;
+    padding: 6px 10px;
 `
 
 const Questions = () => {
@@ -71,7 +83,7 @@ const Questions = () => {
                 </Box>
             </List>
             <CenterIt>
-                <Bottom>Don't find the answer? We can help. Click here</Bottom>
+                <Bottom>Don't find the answer? We can help. <span className="click">Click here</span></Bottom>
             </CenterIt>
         </Container>
     );
