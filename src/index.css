@@ -1,21 +1,29 @@
+a, h3, .menu, button, p {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'EB Garamond', serif;
+}
+
 .business {
     transform: rotate(20deg);
-   
+    font-family: 'East Sea Dokdo', cursive;
 }
 
 .art {
     transform: rotate(-12deg);
-        
+    font-family: 'East Sea Dokdo', cursive;
 }
 
 .design {
     transform: rotate(-10deg);
-        
+    font-family: 'East Sea Dokdo', cursive;  
 }
 
 .uidesign {
     transform: rotate(8deg);
-        
+    font-family: 'East Sea Dokdo', cursive;  
 }
 
 .green {

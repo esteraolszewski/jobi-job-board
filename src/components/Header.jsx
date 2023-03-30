@@ -10,6 +10,7 @@ const Container = styled.div`
     background-size: cover;
     display: flex;
     flex-direction: column;
+    
 `
 // NAVBAR STYLES
 const Wrapper = styled.div`
@@ -37,7 +38,8 @@ const Buttons = styled.div`
 `
 const ItemA = styled.a`
     font-size: 17px;
-    color: #333333;
+    text-shadow: 0px 4px 6px rgba(0,0,0,0.6);
+    color: #ffffff;
     cursor: pointer;
 `
 const ItemB = styled.a`
@@ -60,14 +62,15 @@ const HeaderWrapper = styled.div`
     position: relative;
 `
 const Slogan = styled.h1`
-    font-size: 84px;
+    font-size: 85px;
     color: black;
     text-align: center;
     width: 843px;
     margin: -110px 0 4px 0;
 `
-const Subtitle = styled.h2`
-    font-size: 20px;
+const Subtitle = styled.h3`
+    font-size: 24px;
+    font-weight: lighter;
     color: #050C24;
     margin-bottom: 70px;
 `
@@ -84,6 +87,7 @@ const BlobA = styled.div`
     border-radius: 50%;
     top: 300px;
     left: 300px;
+    font-size: 25px;
 `
 const BlobB = styled.div`
     background-color: white;
@@ -97,7 +101,8 @@ const BlobB = styled.div`
     border-radius: 50%;
     top: 300px;
     right: 300px;
-
+    font-size: 26px;
+    
 `
 const BlobC = styled.div`
     background-color: white;
@@ -111,6 +116,7 @@ const BlobC = styled.div`
     border-radius: 50%;
     top: 485px;
     left: 230px;
+    font-size: 23px;
 
 `
 const BlobD = styled.div`
@@ -125,6 +131,8 @@ const BlobD = styled.div`
     border-radius: 50%;
     top: 485px;
     right: 230px;
+    font-size: 25px;
+
 `
 const MenuContainer = styled.div`
     display: flex;
@@ -140,7 +148,6 @@ const DropdownContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
-   
 `
 const Label = styled.label`
     color: grey;
@@ -226,7 +233,7 @@ const Header = () => {
 
                 <Slogan>Find your job without any hassle.</Slogan>
                 <Subtitle>Jobs & Job search. Find jobs in global. Executive jobs & work.</Subtitle>
-                <MenuContainer>
+                <MenuContainer className="menu">
                     <DropdownContainer>
                             <Label>Job Categories</Label>
                         <Select>
