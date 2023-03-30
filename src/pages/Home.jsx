@@ -8,6 +8,7 @@ import Find from '../components/Find';
 import Questions from '../components/Questions';
 import Footer from '../components/Footer';
 
+
 const Home =() => {
     return (
         <div>

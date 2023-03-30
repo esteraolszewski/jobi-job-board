@@ -17,7 +17,7 @@ const Top = styled.div`
     align-items: center;
     margin: 0 70px;
 `
-const Header = styled.h2`
+const Header = styled.h3`
     font-size: 40px;
     color: black;
 `
