@@ -30,6 +30,12 @@ const MenuItem = styled.a`
     font-size: 17px;
     color: #333333;
     cursor: pointer;
+    transition: all .5s ease-out;
+
+    &:hover{
+        color: white;
+        transition: all .5s ease-in;
+    }
 `
 const Buttons = styled.div`
     display: flex;
@@ -41,6 +47,12 @@ const ItemA = styled.a`
     text-shadow: 0px 4px 6px rgba(0,0,0,0.6);
     color: #ffffff;
     cursor: pointer;
+    transition: all .5s ease-out;
+
+    &:hover{
+        color: black;
+        transition: all .5s ease-in;
+    }
 `
 const ItemB = styled.a`
     font-size: 17px;
@@ -51,6 +63,12 @@ const ItemB = styled.a`
     padding: 10px;
     width: 70px;
     text-align: center;
+    transition: all .5s ease-out;
+
+    &:hover{
+        width: 80px;
+        transition: all .5s ease-in;
+    }
 `
 // HEADER STYLES
 const HeaderWrapper = styled.div`
@@ -197,6 +215,12 @@ const Upload = styled.button`
     margin-top: 25px;
     padding-bottom: 8px;
     cursor: pointer;
+    transition: all .5s ease-out;
+
+    &:hover{
+        font-size: 16px;
+        transition: all .5s ease-in;
+    }
 `
 const Icon = styled(UploadFile)`
     color: white;

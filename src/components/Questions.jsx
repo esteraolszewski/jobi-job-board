@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import "../index.css";
+import React, { useState } from 'react';
 
 
 const Container = styled.div`
@@ -44,6 +45,11 @@ const Open = styled.div`
         background-color: #00B454;
     }
 `
+const Para = styled.p`
+    padding: 8px 30px;
+    font-size: 15px;
+    line-height: 2;
+`
 const CenterIt = styled.div`
     display: flex;
     justify-content: center;
@@ -57,14 +63,23 @@ const Bottom = styled.p`
 `
 
 const Questions = () => {
+    const [toggle, setToggle] = useState(true);
+    const handleClick = () => {
+        setToggle(!toggle);
+    };
     return (
         <Container>
             <Header>Questions & Answers</Header>
             <List>
                 <Box>
                     <Subtitle>How does the free trial work?</Subtitle>
-                    <Open>+</Open>
+                    <Open onClick={handleClick}>+</Open>
                 </Box>
+                {toggle ?
+                        <Para>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat numquam minus enim quidem est qui repudiandae odio nulla atque amet veniam architecto, autem repellendus dolorem similique vel blanditiis ea.</Para>  
+                        :
+                        <></>  
+                    }
                 <Box>
                     <Subtitle>How do you find different criteria in your process?</Subtitle>
                     <Open>+</Open>
