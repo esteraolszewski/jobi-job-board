@@ -3,7 +3,7 @@ import "../index.css";
 
 
 const Container = styled.div`
-    
+
 `
 
 const Header = styled.h2`

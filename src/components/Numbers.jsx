@@ -8,7 +8,6 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: #F5F5F5;
 `
 const Box = styled.div`
     display: flex;
@@ -59,6 +58,7 @@ const Freelancer = styled.div`
     border-radius: 5px;
     position: absolute;
     transform: translate(-70px, 140px);
+    box-shadow: 0px 34px 74px -10px rgba(0,0,0,0.30);
 `
 const P = styled.p`
     font-size: 15px;

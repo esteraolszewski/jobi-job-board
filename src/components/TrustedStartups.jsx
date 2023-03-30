@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import logoOne from "../../src/images/mondaylogo.jpg";
 import logoTwo from "../../src/images/bobimage.jpg";
+import { ArrowLeft } from "@styled-icons/fluentui-system-regular/ArrowLeft";
+import { ArrowRight } from "@styled-icons/fluentui-system-regular/ArrowRight";
+import { Star } from "@styled-icons/material/Star";
+import { StarOutline } from "@styled-icons/material/StarOutline";
 
 
 const Container = styled.div`
     padding: 40px 0;
     margin-bottom: 100px;
-    background-color: #F5F5F5;
 `
 const Top = styled.div`
     display: flex;
@@ -22,11 +25,29 @@ const Icons = styled.div`
     display: flex;
     gap: 20px;
 `
-const IconLeft = styled.div`
-    
+const IconLeft = styled(ArrowLeft)`
+    color: #D8D8D8;
+    width: 30px;
+    cursor: pointer;
+    transition: all .5s ease-out;
+
+    &:hover{
+        color: black;
+        width: 50px;
+        transition: all .5s ease-in;
+    }
 `
-const IconRight = styled.div`
-    
+const IconRight = styled(ArrowRight)`
+    color: #D8D8D8;
+    width: 30px;
+    cursor: pointer;
+    transition: all .5s ease-out;
+
+    &:hover{
+        color: black;
+        width: 50px;
+        transition: all .5s ease-in;
+    }
 `
 const Boxes = styled.div`
     display: flex;
@@ -71,7 +92,7 @@ const Name = styled.p`
 `
 const Line = styled.div`
     border-bottom: 1px white solid;
-    width: 380px;
+    width: 470px;
 `
 const RatingContainer = styled.div`
     display: flex;
@@ -91,6 +112,14 @@ const Stars = styled.p`
     font-size: 20px;
     color: white;
 `
+const One = styled(Star)`
+    color: white;
+    width: 20px;
+`
+const Five = styled(StarOutline)`
+    color: white;
+    width: 20px;
+`
 
 const TrustedStartups = () => {
     return (
@@ -98,8 +127,8 @@ const TrustedStartups = () => {
             <Top>
                 <Header>Trusted by leading startups.</Header>
                 <Icons>
-                    <IconLeft>ARROW</IconLeft>
-                    <IconRight>ARROW</IconRight>
+                    <IconLeft/>
+                    <IconRight/>
                 </Icons>
             </Top>
             <Boxes>
@@ -114,7 +143,13 @@ const TrustedStartups = () => {
                             <Rating>4.5 Excellent</Rating>
                         </BottomA>
                         <BottomB>
-                            <Stars>12345</Stars>
+                            <Stars>
+                                <One/>
+                                <One/>
+                                <One/>
+                                <One/>
+                                <Five/>
+                            </Stars>
                         </BottomB>
                     </RatingContainer>
                 </MondayBox>
@@ -130,7 +165,13 @@ const TrustedStartups = () => {
                             <Rating>4.8 Awesome</Rating>
                         </BottomA>
                         <BottomB>
-                            <Stars>12345</Stars>
+                            <Stars>
+                                <One/>
+                                <One/>
+                                <One/>
+                                <One/>
+                                <One/>
+                            </Stars>
                         </BottomB>
                     </RatingContainer>
                 </ShipBox>

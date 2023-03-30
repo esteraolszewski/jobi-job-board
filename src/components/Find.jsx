@@ -6,6 +6,7 @@ import imgthree from "../../src/images/workerThree.jpg";
 
 const Container = styled.div`
     padding: 40px 0;
+
 `
 const Box = styled.div`
     display: flex;

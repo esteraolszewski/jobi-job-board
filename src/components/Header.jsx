@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import logo from "../../src/images/Logo.jpg";
+import logo from "../../src/images/Logo.png";
 import img from '../../src/images/headeroption.jpg';
+import { UploadFile } from "@styled-icons/material-outlined/UploadFile";
 import "../index.css";
 
 const Container = styled.div`
@@ -176,15 +177,24 @@ const Button = styled.button`
     text-transform: uppercase;
     font-size: 15px;
 `
+const CV = styled.div`
+    display: flex;
+    border-bottom: solid white 1px;
+    gap: 6px;
+`
 const Upload = styled.button`
     border: none;
     background: none;
     font-size: 15px;
     color: white;
-    border-bottom: solid white 1px;
-    line-height: 2;
     margin-top: 25px;
+    padding-bottom: 8px;
     cursor: pointer;
+`
+const Icon = styled(UploadFile)`
+    color: white;
+    width: 20px;
+    padding: 25px 0 8px;
 `
 
 const Header = () => {
@@ -239,8 +249,10 @@ const Header = () => {
                     </InputContainer>
                     <Button>Search</Button>
                 </MenuContainer>
-
-                <Upload>Upload your cv</Upload>
+                <CV>
+                    <Upload>Upload your cv</Upload>
+                    <Icon/>
+                </CV>
             </HeaderWrapper>
         </Container>
           

@@ -1,12 +1,17 @@
 import styled from "styled-components";
+import { PriceTag } from "@styled-icons/remix-line/PriceTag";
+import one from "../../src/images/MasterCard_Logo.png";
+import two from "../../src/images/google.png";
+import three from "../../src/images/slack.png";
+import four from "../../src/images/adobe.png";
+import five from "../../src/images/picnichealth.png";
 import "../index.css";
 
 
 const Container = styled.div`
     padding: 40px 0 40px 0;
-    background-color: #F5F5F5;
-
 `
+
 const Top = styled.div`
     display: flex;
     justify-content: space-evenly;
@@ -32,19 +37,31 @@ const Listings = styled.div`
 `
 const Jobs = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 10px;
 `
 const First = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 20%;
+    gap: 45px;
+    width: 25%;
     border-bottom: lightgray 1px solid;
 
 `
-const Image = styled.div`
-    
+const ImageOne = styled.img`
+    width: 20%;
+`
+const ImageTwo = styled.img`
+    width: 20%;
+`
+const ImageThree = styled.img`
+    width: 20%;
+`
+const ImageFour = styled.img`
+    width: 20%;
+`
+const ImageFive = styled.img`
+    width: 15%;
 `
 const Name = styled.h3`
     
@@ -52,7 +69,7 @@ const Name = styled.h3`
 const Second = styled.div`
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 15%;
     border-bottom: lightgray 1px solid;
     justify-content: center;
 `
@@ -68,7 +85,7 @@ const Date = styled.p`
 const Third = styled.div`
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 15%;
     border-bottom: lightgray 1px solid;
     justify-content: center;
 `
@@ -90,8 +107,18 @@ const Fourth = styled.div`
     border-bottom: lightgray 1px solid;
 
 `
-const Icon = styled.div`
-    
+const Icon = styled(PriceTag)`
+    width: 15px;
+    color: lightgrey;
+    border: lightgrey 1.8px solid;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover{
+        color: #00BF58;
+        border-color : #00BF58;
+    }
 `
 const Button = styled.button`
     color: white;
@@ -123,7 +150,7 @@ const NewListing = () => {
             <Listings>
                 <Jobs>
                     <First>
-                        <Image>IMG</Image>
+                        <ImageOne src={one}/>
                         <Name>Developer & expert in java c++</Name>
                     </First>
                     <Second>
@@ -135,13 +162,13 @@ const NewListing = () => {
                         <Category>Developer, Coder</Category>
                     </Third>
                     <Fourth>
-                        <Icon>ICON</Icon>
+                        <Icon/>
                         <Button>APPLY</Button>
                     </Fourth>
                 </Jobs>
                 <Jobs>
                     <First>
-                        <Image>IMG</Image>
+                        <ImageTwo src={two}/>
                         <Name>Animator & Expert in maya 3D</Name>
                     </First>
                     <Second>
@@ -153,13 +180,13 @@ const NewListing = () => {
                         <Category>Finance, Accounting</Category>
                     </Third>
                     <Fourth>
-                        <Icon>ICON</Icon>
+                        <Icon/>
                         <Button>APPLY</Button>
                     </Fourth>
                 </Jobs>
                 <Jobs>
                     <First>
-                        <Image>IMG</Image>
+                        <ImageThree src={three}/>
                         <Name>Marketing Specialist in SEO & SMM</Name>
                     </First>
                     <Second>
@@ -171,13 +198,13 @@ const NewListing = () => {
                         <Category>Design, Artist</Category>
                     </Third>
                     <Fourth>
-                        <Icon>ICON</Icon>
+                        <Icon/>
                         <Button>APPLY</Button>
                     </Fourth>
                 </Jobs>
                 <Jobs>
                     <First>
-                        <Image>IMG</Image>
+                        <ImageFour src={four}/>
                         <Name>Developer & expert in java c++</Name>
                     </First>
                     <Second>
@@ -189,13 +216,13 @@ const NewListing = () => {
                         <Category>Application, Dev</Category>
                     </Third>
                     <Fourth>
-                        <Icon>ICON</Icon>
+                        <Icon/>
                         <Button>APPLY</Button>
                     </Fourth>
                 </Jobs>
                 <Jobs>
                     <First>
-                        <Image>IMG</Image>
+                        <ImageFive src={five}/>
                         <Name>Lead & Product Designer</Name>
                     </First>
                     <Second>
@@ -207,7 +234,7 @@ const NewListing = () => {
                         <Category>Finance, Business</Category>
                     </Third>
                     <Fourth>
-                        <Icon>ICON</Icon>
+                        <Icon/>
                         <Button>APPLY</Button>
                     </Fourth>
                 </Jobs>
