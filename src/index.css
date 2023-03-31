@@ -32,11 +32,13 @@ h1, h2 {
 
 .green {
     color: #00BF58;
+    font-weight: bold;
 }
 
 .click {
     color: #00BF58;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .exploreall {

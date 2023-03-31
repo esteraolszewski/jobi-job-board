@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { PriceTag } from "@styled-icons/remix-line/PriceTag";
+import { KeyboardArrowRight } from "@styled-icons/material/KeyboardArrowRight";
 import one from "../../src/images/MasterCard_Logo.png";
 import two from "../../src/images/google.png";
 import three from "../../src/images/slack.png";
@@ -22,10 +23,24 @@ const Top = styled.div`
 const Header = styled.h2`
     font-size: 50px;
 `
+const ExploreBox = styled.div`
+    display: flex;
+    border-bottom: solid #00BF58 1px;
+    line-height: 2;
+    cursor: pointer;
+`
 const Explore = styled.a`
     color: #00BF58;
-    text-decoration: underline;
-    cursor: pointer;
+    transition: all .5s ease-out;
+    
+    &:hover{
+        font-size: 15px;
+        transition: all .5s ease-in;
+    }
+`
+const Arrow = styled(KeyboardArrowRight)`
+    color: #00BF58;
+    width: 20px;
 `
 const Listings = styled.div`
     display: flex;
@@ -55,7 +70,7 @@ const ImageTwo = styled.img`
     width: 20%;
 `
 const ImageThree = styled.img`
-    width: 20%;
+    width: 22%;
 `
 const ImageFour = styled.img`
     width: 20%;
@@ -134,8 +149,8 @@ const CenterIt = styled.div`
     margin-top: 40px;
 `
 const ClickHere = styled.p`
-    background-color: lightgray;
-    width: 25%;
+    background-color: #e1e1e1;
+    width: 26%;
     text-align: center;
     padding: 6px 10px;
 `
@@ -145,7 +160,11 @@ const NewListing = () => {
         <Container>
             <Top>
                 <Header>New job listing</Header>
-                <Explore>Explore all jobs</Explore>
+                <ExploreBox>
+                    <Explore>Explore all jobs</Explore>
+                    <Arrow/>
+                </ExploreBox>
+
             </Top>
             <Listings>
                 <Jobs>
@@ -240,7 +259,7 @@ const NewListing = () => {
                 </Jobs>
             </Listings>
             <CenterIt>
-                <ClickHere>Do you want to post a job for your company? <span className="green"><b>We can help.</b> Click here</span></ClickHere>  
+                <ClickHere>Do you want to post a job for your company? <span className="green">We can help.</span> <span className="click">Click here</span></ClickHere>  
             </CenterIt>
         </Container>
     );

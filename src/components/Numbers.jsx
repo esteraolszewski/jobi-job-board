@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import img from "../../src/images/personlaptop.jpg";
+import headOne from "../../src/images/headshot1.jpg";
+import headTwo from "../../src/images/headshot2.jpg";
+import headThree from "../../src/images/headshot3.jpg";
 import { KeyboardArrowRight } from "@styled-icons/material/KeyboardArrowRight";
 import "../index.css";
 
@@ -73,6 +76,7 @@ const Freelancer = styled.div`
     position: absolute;
     transform: translate(-110px, 99px);
     box-shadow: 0px 34px 74px -10px rgba(0,0,0,0.30);
+    padding: 5px 5px 15px 15px;
 `
 const P = styled.p`
     font-size: 15px;
@@ -82,44 +86,50 @@ const P = styled.p`
 `
 const CircleBox = styled.div`
     display: flex;
-    
+    position: relative;
 `
-const CircleOne = styled.div`
+const CircleOne = styled.img`
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #00BF58;
-    border: white 4px solid;
+    border: white 5px solid;
+    object-fit: cover;
 `
-const CircleTwo = styled.div`
+const CircleTwo = styled.img`
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #00BF58;
-    border: white 4px solid;
-`
-const CircleThree = styled.div`
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #00BF58;
-    border: white 4px solid;
+    border: white 5px solid;
     position: absolute;
-    left: 85px;
+    left: 40px;
+    object-fit: cover;
+
+`
+const CircleThree = styled.img`
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: white 5px solid;
+    position: absolute;
+    left: 80px;
+    object-fit: cover;
+
 `
 const Circles = styled.div`
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: #00BF58;
-    border: white 4px solid;
+    border: white 5px solid;
     color: white;
     font-size: 25px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    left: 120px;
+    cursor: pointer;
 `
 const InfoContainer = styled.div`
     display: flex;
@@ -162,9 +172,9 @@ const Numbers = () => {
                 <Freelancer>
                     <P>Total Freelancer</P>
                     <CircleBox>
-                        <CircleOne/>
-                        <CircleTwo/>
-                        <CircleThree/>
+                        <CircleOne src={headOne}/>
+                        <CircleTwo src={headTwo}/>
+                        <CircleThree src={headThree}/>
                         <Circles>+</Circles>
                     </CircleBox>
                 </Freelancer>
