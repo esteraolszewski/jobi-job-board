@@ -3,14 +3,16 @@ import logo from "../../src/images/Logo.png";
 import img from '../../src/images/headeroption.jpg';
 import { UploadFile } from "@styled-icons/material-outlined/UploadFile";
 import "../index.css";
-import { desktop, tabletTwo, tablet, mobileTwo, mobile } from "../responsive";
+import { desktop, laptop, tabletTwo, tablet, mobileTwo, mobile } from "../responsive";
 
 const Container = styled.div`
     height: 100vh;
     background-image: url(${img});
     background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
+    ${mobileTwo( { backgroundImage: "none", backgroundColor: "#E0DCDB" })}
     
 `
 // NAVBAR STYLES
@@ -84,8 +86,9 @@ const Slogan = styled.h1`
     font-size: 85px;
     color: black;
     text-align: center;
-    width: 70%;
+    width: 45%;
     margin: -110px 0 4px 0;
+    ${laptop( { width: "70%" })}
     ${tabletTwo( { fontSize: "70px"})}
     ${mobileTwo( { fontSize: "50px"})}
 
@@ -110,8 +113,8 @@ const BlobA = styled.div`
     position: absolute;
     transform: rotate(-20deg);
     border-radius: 50%;
-    top: 6em;
-    left: 11em;
+    top: 4em;
+    left: 9em;
     font-size: 25px;
     ${desktop( { display: "none" })}
 
@@ -126,8 +129,8 @@ const BlobB = styled.div`
     position: absolute;
     transform: rotate(12deg);
     border-radius: 50%;
-    top: 6em;
-    right: 11em;
+    top: 4em;
+    right: 9em;
     font-size: 26px;
     ${desktop( { display: "none" })}    
 `
@@ -141,8 +144,8 @@ const BlobC = styled.div`
     position: absolute;
     transform: rotate(10deg);
     border-radius: 50%;
-    top: 16em;
-    left: 9em;
+    top: 12em;
+    left: 5em;
     font-size: 23px;
     ${desktop( { display: "none" })}
 `
@@ -156,8 +159,8 @@ const BlobD = styled.div`
     position: absolute;
     transform: rotate(-8deg);
     border-radius: 50%;
-    top: 14em;
-    right: 7em;
+    top: 12em;
+    right: 5em;
     font-size: 25px;
     ${desktop( { display: "none" })}
 `
