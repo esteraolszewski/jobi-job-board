@@ -6,14 +6,16 @@ import { Phone } from "@styled-icons/boxicons-solid/Phone";
 import { Sliders2 } from "@styled-icons/bootstrap/Sliders2";
 import { Bank2 } from "@styled-icons/bootstrap/Bank2";
 import { KeyboardArrowRight } from "@styled-icons/material/KeyboardArrowRight";
-
+import { mobileTwo } from "../responsive";
 
 const Container = styled.div`
     margin: 90px;
+    ${mobileTwo( { margin: "0" })}
 
 `
 const Top = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 0 70px;
@@ -43,6 +45,7 @@ const Arrow = styled(KeyboardArrowRight)`
 `
 const Boxes = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 20px;
 `
@@ -62,6 +65,7 @@ const Category = styled.div`
     &:focus {
         border-color: #00BF58;
     }
+
 `
 const IconOne = styled(Pencil)`
     width: 30px;

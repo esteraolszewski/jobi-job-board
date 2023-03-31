@@ -3,6 +3,7 @@ import logo from "../../src/images/Logo.png";
 import img from '../../src/images/headeroption.jpg';
 import { UploadFile } from "@styled-icons/material-outlined/UploadFile";
 import "../index.css";
+import { desktop, tabletTwo, tablet, mobileTwo, mobile } from "../responsive";
 
 const Container = styled.div`
     height: 100vh;
@@ -83,14 +84,20 @@ const Slogan = styled.h1`
     font-size: 85px;
     color: black;
     text-align: center;
-    width: 843px;
+    width: 70%;
     margin: -110px 0 4px 0;
+    ${tabletTwo( { fontSize: "70px"})}
+    ${mobileTwo( { fontSize: "50px"})}
+
 `
 const Subtitle = styled.h3`
     font-size: 24px;
     font-weight: lighter;
     color: #050C24;
     margin-bottom: 70px;
+    text-align: center;
+    ${mobileTwo( { fontSize: "20px"})}
+
 `
 
 const BlobA = styled.div`
@@ -103,9 +110,11 @@ const BlobA = styled.div`
     position: absolute;
     transform: rotate(-20deg);
     border-radius: 50%;
-    top: 300px;
-    left: 300px;
+    top: 6em;
+    left: 11em;
     font-size: 25px;
+    ${desktop( { display: "none" })}
+
 `
 const BlobB = styled.div`
     background-color: white;
@@ -117,10 +126,10 @@ const BlobB = styled.div`
     position: absolute;
     transform: rotate(12deg);
     border-radius: 50%;
-    top: 300px;
-    right: 300px;
+    top: 6em;
+    right: 11em;
     font-size: 26px;
-    
+    ${desktop( { display: "none" })}    
 `
 const BlobC = styled.div`
     background-color: white;
@@ -132,10 +141,10 @@ const BlobC = styled.div`
     position: absolute;
     transform: rotate(10deg);
     border-radius: 50%;
-    top: 485px;
-    left: 230px;
+    top: 16em;
+    left: 9em;
     font-size: 23px;
-
+    ${desktop( { display: "none" })}
 `
 const BlobD = styled.div`
     background-color: white;
@@ -147,10 +156,10 @@ const BlobD = styled.div`
     position: absolute;
     transform: rotate(-8deg);
     border-radius: 50%;
-    top: 485px;
-    right: 230px;
+    top: 14em;
+    right: 7em;
     font-size: 25px;
-
+    ${desktop( { display: "none" })}
 `
 const MenuContainer = styled.div`
     display: flex;
@@ -161,6 +170,10 @@ const MenuContainer = styled.div`
     height: 50px;
     padding: 20px;
     border-radius: 10px;
+    ${desktop( { width: "60%" })}
+    ${tabletTwo( { width: "90%" })}
+    ${tablet( { flexWrap: "wrap", height: "15%" })}
+    ${mobile( { height: "25%" })}
 `
 const DropdownContainer = styled.div`
     display: flex;
@@ -201,6 +214,8 @@ const Button = styled.button`
     text-align: center;
     text-transform: uppercase;
     font-size: 15px;
+    ${tablet( { marginTop: "15px" })}
+
 `
 const CV = styled.div`
     display: flex;
