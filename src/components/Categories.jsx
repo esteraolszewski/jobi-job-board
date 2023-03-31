@@ -5,6 +5,7 @@ import { Briefcase } from "@styled-icons/fluentui-system-filled/Briefcase";
 import { Phone } from "@styled-icons/boxicons-solid/Phone";
 import { Sliders2 } from "@styled-icons/bootstrap/Sliders2";
 import { Bank2 } from "@styled-icons/bootstrap/Bank2";
+import { KeyboardArrowRight } from "@styled-icons/material/KeyboardArrowRight";
 
 
 const Container = styled.div`
@@ -21,11 +22,24 @@ const Header = styled.h3`
     font-size: 40px;
     color: black;
 `
-const Explore = styled.a`
-    color: #00BF58;
+const ExploreBox = styled.div`
+    display: flex;
     border-bottom: solid #00BF58 1px;
     line-height: 2;
     cursor: pointer;
+`
+const Explore = styled.a`
+    color: #00BF58;
+    transition: all .5s ease-out;
+    
+    &:hover{
+        font-size: 15px;
+        transition: all .5s ease-in;
+    }
+`
+const Arrow = styled(KeyboardArrowRight)`
+    color: #00BF58;
+    width: 20px;
 `
 const Boxes = styled.div`
     display: flex;
@@ -79,7 +93,10 @@ const Categories = () => {
         <Container>
             <Top>
                 <Header>Most Demanding Categories.</Header>
-                <Explore>Explore all fields</Explore>
+                <ExploreBox>
+                    <Explore>Explore all fields</Explore>
+                    <Arrow/>
+                </ExploreBox>
             </Top>
             <Boxes>
                 <Category>

@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 a, h3, .menu, button, p {
     font-family: 'Roboto', sans-serif;
 }
@@ -32,5 +36,9 @@ h1, h2 {
 
 .click {
     color: #00BF58;
+    text-decoration: underline;
+}
+
+.exploreall {
     text-decoration: underline;
 }

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import img from "../../src/images/personlaptop.jpg";
+import { KeyboardArrowRight } from "@styled-icons/material/KeyboardArrowRight";
+import "../index.css";
 
 
 const Container = styled.div`
@@ -18,18 +20,15 @@ const Box = styled.div`
     border-radius: 5%;
     position: relative;
 `
-// const ImageBox = styled.div`
-//     width: 30%;
-    
-// `
+
 const Image = styled.img`
-    width: 30%;
-    height: 100%;
+    width: 35%;
     object-fit: cover;
-    /* display: flex; */
+    
+    
 `
 const Text = styled.div`
-    width: 30%;
+    width: 39%;
     padding-bottom: 80px;
     display: flex;
     flex-direction: column;
@@ -44,12 +43,27 @@ const Paragraph = styled.p`
     font-size: 20px;
     color: white;
 `
+const ExploreBox = styled.div`
+    border: white 1px solid;
+    width: 90%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all .5s ease-out;
+
+    &:hover{
+        width: 93%;
+        transition: all .5s ease-in;
+    }
+`
 const Explore = styled.p`
     font-size: 15px;
     color: white;
-    border: white 1px solid;
-    width: 90%;
-    padding: 6px;
+`
+const Arrow = styled(KeyboardArrowRight)`
+    width: 20px;
+    color: white;
 `
 const Freelancer = styled.div`
     background-color: white;
@@ -57,7 +71,7 @@ const Freelancer = styled.div`
     height: 110px;
     border-radius: 5px;
     position: absolute;
-    transform: translate(-70px, 140px);
+    transform: translate(-110px, 99px);
     box-shadow: 0px 34px 74px -10px rgba(0,0,0,0.30);
 `
 const P = styled.p`
@@ -65,6 +79,47 @@ const P = styled.p`
     color: grey;
     text-align: end;
     padding-right: 20px;
+`
+const CircleBox = styled.div`
+    display: flex;
+    
+`
+const CircleOne = styled.div`
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00BF58;
+    border: white 4px solid;
+`
+const CircleTwo = styled.div`
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00BF58;
+    border: white 4px solid;
+`
+const CircleThree = styled.div`
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00BF58;
+    border: white 4px solid;
+    position: absolute;
+    left: 85px;
+`
+const Circles = styled.div`
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00BF58;
+    border: white 4px solid;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 `
 const InfoContainer = styled.div`
     display: flex;
@@ -91,19 +146,27 @@ const Numbers = () => {
     return (
         <Container>
             <Box>
-                {/* <ImageBox> */}
+            
                     <Image src={img}/>
-                {/* </ImageBox> */}
+                
                 <Text>
                     <Header>Get the job of your dreams quickly.</Header>
                     <Paragraph>Commonly used in the graphic, print publishing industries for previewing visual mockups. Limited social discrimination.</Paragraph>
 
-                    {/* Fix Explore */}
-                    <Explore>Find your job. Explore all</Explore>
+                    <ExploreBox>
+                        <Explore>Find your job. <span className="exploreall">Explore all</span></Explore>
+                        <Arrow/>
+                    </ExploreBox>
                 </Text>
             </Box>
                 <Freelancer>
                     <P>Total Freelancer</P>
+                    <CircleBox>
+                        <CircleOne/>
+                        <CircleTwo/>
+                        <CircleThree/>
+                        <Circles>+</Circles>
+                    </CircleBox>
                 </Freelancer>
             
             <InfoContainer>
