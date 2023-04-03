@@ -5,21 +5,25 @@ import { ArrowLeft } from "@styled-icons/fluentui-system-regular/ArrowLeft";
 import { ArrowRight } from "@styled-icons/fluentui-system-regular/ArrowRight";
 import { Star } from "@styled-icons/material/Star";
 import { StarOutline } from "@styled-icons/material/StarOutline";
-
+import { laptop, tabletTwo, mobileTwo, mobile } from "../responsive";
 
 const Container = styled.div`
     padding: 40px 0;
     margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 const Top = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    gap: 85px;
+    width: 60%;
+    ${laptop( { justifyContent: "center", marginBottom: "30px" })}
 `
 const Header = styled.h2`
     font-size: 50px;
-    width: 30%;
 `
 const Icons = styled.div`
     display: flex;
@@ -53,6 +57,10 @@ const Boxes = styled.div`
     display: flex;
     justify-content: center;
     gap: 20px;
+    ${tabletTwo( { flexDirection: "column", alignItems: "center", width: "200%" })}
+    ${mobileTwo( { width: "300%" })}
+    ${mobile( { width: "250%" })}
+
 `
 const MondayBox = styled.div`
     background-color: #249F47;
@@ -75,10 +83,12 @@ const ShipBox = styled.div`
 `
 const ImageOne = styled.img`
     width: 45%;
+    ${mobile( { width: "80%" })}
     
 `
 const ImageTwo = styled.img`
     width: 40%;
+    ${mobile( { width: "80%" })}
     
 `
 const Title = styled.h3`
@@ -92,11 +102,12 @@ const Name = styled.p`
 `
 const Line = styled.div`
     border-bottom: 1px white solid;
-    width: 470px;
+    width: 100%;
 `
 const RatingContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `
 const BottomA = styled.div`
     
@@ -107,18 +118,23 @@ const BottomB = styled.div`
 const Rating = styled.p`
     font-size: 20px;
     color: white;
+    ${mobile( { fontSize: "15px" })}
+
 `
-const Stars = styled.p`
-    font-size: 20px;
-    color: white;
+const Stars = styled.div`
+    
 `
 const One = styled(Star)`
     color: white;
     width: 20px;
+    ${mobile( { width: "15px" })}
+
 `
 const Five = styled(StarOutline)`
     color: white;
     width: 20px;
+    ${mobile( { width: "15px" })}
+
 `
 
 const TrustedStartups = () => {

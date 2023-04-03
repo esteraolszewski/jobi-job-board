@@ -5,6 +5,8 @@ import headTwo from "../../src/images/headshot2.jpg";
 import headThree from "../../src/images/headshot3.jpg";
 import { KeyboardArrowRight } from "@styled-icons/material/KeyboardArrowRight";
 import "../index.css";
+import { desktop, laptop, tabletTwo, mobileTwo } from "../responsive";
+
 
 
 const Container = styled.div`
@@ -22,12 +24,16 @@ const Box = styled.div`
     background-color: #755146;
     border-radius: 5%;
     position: relative;
+    ${laptop( { width: "70%" })}
+    ${tabletTwo( { flexDirection: "column" })}
+    ${mobileTwo( { width: "90%", marginTop: "50px" })}
+
 `
 
 const Image = styled.img`
     width: 35%;
     object-fit: cover;
-    
+    ${tabletTwo( { width: "50%" })}
     
 `
 const Text = styled.div`
@@ -36,6 +42,8 @@ const Text = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    ${tabletTwo( { width: "80%" })}
+
 `
 const Header = styled.h2`
     font-size: 50px;
@@ -77,6 +85,11 @@ const Freelancer = styled.div`
     transform: translate(-110px, 99px);
     box-shadow: 0px 34px 74px -10px rgba(0,0,0,0.30);
     padding: 5px 5px 15px 15px;
+    ${desktop( { bottom: "30%", left: "50%", marginBottom: "50px" })}
+    ${laptop( { bottom: "27%" })}
+    ${tabletTwo( { bottom: "37%" })}
+    ${mobileTwo( { bottom: "36%" })}
+
 `
 const P = styled.p`
     font-size: 15px;
@@ -137,8 +150,8 @@ const InfoContainer = styled.div`
     justify-content: space-evenly;
     gap: 180px;
     margin: 80px;
-    position: relative;
-
+    ${tabletTwo( { flexDirection: "column", gap: "50px" })}
+  
 `
 const Payout = styled.div`
     display: flex;
@@ -148,9 +161,12 @@ const Payout = styled.div`
 const Number = styled.h3`
     font-size: 50px;
     margin: -2px 0;
+    ${laptop( { fontSize: "30px" })}
 `
 const Words = styled.p`
     font-size: 20px;
+    ${laptop( { fontSize: "15px" })}
+
 `
 const Numbers = () => {
     return (

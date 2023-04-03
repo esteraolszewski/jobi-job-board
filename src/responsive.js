@@ -47,3 +47,11 @@ export const desktop = (props) => {
         }
     `
 };
+
+export const desktopTwo = (props) => {
+    return css`
+        @media only screen and (max-width: 1500px) {
+            ${props}
+        }
+    `
+};

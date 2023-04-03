@@ -7,18 +7,25 @@ import three from "../../src/images/slack.png";
 import four from "../../src/images/adobe.png";
 import five from "../../src/images/picnichealth.png";
 import "../index.css";
+import { desktopTwo, laptop, tabletTwo, tablet, mobile } from "../responsive";
+
 
 
 const Container = styled.div`
     padding: 40px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 const Top = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 450px;
+    justify-content: space-between;
+    width: 70%;
     margin-bottom: 30px;
+
 `
 const Header = styled.h2`
     font-size: 50px;
@@ -46,9 +53,12 @@ const Listings = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 345px;
+    width: 70%;
     border: lightgray 1px solid;
     border-radius: 10px;
+    ${desktopTwo( { width: "80%" })}
+    ${tabletTwo( { width: "95%" })}
+
 `
 const Jobs = styled.div`
     display: flex;
@@ -61,25 +71,36 @@ const First = styled.div`
     gap: 45px;
     width: 25%;
     border-bottom: lightgray 1px solid;
+    ${tablet( { flexWrap: "wrap", gap: "0" })}
 
 `
 const ImageOne = styled.img`
     width: 20%;
+    ${tabletTwo( { width: "50%" })}
+
 `
 const ImageTwo = styled.img`
     width: 20%;
+    ${tabletTwo( { width: "50%" })}
+
 `
 const ImageThree = styled.img`
     width: 22%;
+    ${tabletTwo( { width: "50%" })}
+
 `
 const ImageFour = styled.img`
     width: 20%;
+    ${tabletTwo( { width: "50%" })}
+
 `
 const ImageFive = styled.img`
     width: 15%;
+    ${tabletTwo( { width: "50%" })}
+
 `
 const Name = styled.h3`
-    
+    ${mobile( { fontSize: "15px" })}
 `
 const Second = styled.div`
     display: flex;
@@ -87,15 +108,21 @@ const Second = styled.div`
     width: 15%;
     border-bottom: lightgray 1px solid;
     justify-content: center;
+    ${mobile( { width: "20%" })}
+
 `
 const Availability = styled.p`
     color: #00BF58;
     font-size: 10px;
     margin-bottom: -10px;
+    ${mobile( { fontSize: "12px" })}
+
 `
 const Date = styled.p`
     font-size: 15px;
     color: grey;
+    ${mobile( { fontSize: "15px" })}
+
 `
 const Third = styled.div`
     display: flex;
@@ -103,23 +130,30 @@ const Third = styled.div`
     width: 15%;
     border-bottom: lightgray 1px solid;
     justify-content: center;
+    ${mobile( { width: "20%" })}
+
 `
 const Location = styled.p`
     font-size: 10px;
     color: grey;
     margin-bottom: -6px;
+    ${mobile( { fontSize: "12px" })}
 
 `
 const Category = styled.p`
     font-size: 12px;
     font-weight: bold;
+    ${mobile( { fontSize: "15px" })}
+
 `
 const Fourth = styled.div`
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     width: 10%;
     border-bottom: lightgray 1px solid;
+    ${mobile( { width: "20%" })}
 
 `
 const Icon = styled(PriceTag)`
@@ -134,6 +168,7 @@ const Icon = styled(PriceTag)`
         color: #00BF58;
         border-color : #00BF58;
     }
+
 `
 const Button = styled.button`
     color: white;
@@ -142,17 +177,24 @@ const Button = styled.button`
     padding: 10px;
     height: 40px;
     cursor: pointer;
+    ${mobile( { padding: "5px", width: "30px", fontSize: "8px" })}
+
 `
 const CenterIt = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    width: 100%;
 `
 const ClickHere = styled.p`
     background-color: #e1e1e1;
     width: 26%;
     text-align: center;
     padding: 6px 10px;
+    ${desktopTwo( { width: "35%" })}
+    ${laptop( { width: "50%" })}
+    ${mobile( { width: "100%" })}
+
 `
 
 const NewListing = () => {
