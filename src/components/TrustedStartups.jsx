@@ -57,10 +57,7 @@ const Boxes = styled.div`
     display: flex;
     justify-content: center;
     gap: 20px;
-    ${tabletTwo( { flexDirection: "column", alignItems: "center", width: "200%" })}
-    ${mobileTwo( { width: "300%" })}
-    ${mobile( { width: "250%" })}
-
+    ${tabletTwo( { flexDirection: "column", alignItems: "center" })}
 `
 const MondayBox = styled.div`
     background-color: #249F47;
@@ -70,6 +67,9 @@ const MondayBox = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    ${tabletTwo({ width: "50%" })}
+    ${mobileTwo({ width: "60%" })}
+
 `
 const ShipBox = styled.div`
     background-color: #755146;
@@ -79,6 +79,8 @@ const ShipBox = styled.div`
     display: flex;
     flex-direction: column;
     gap: 18px;
+    ${tabletTwo({ width: "50%" })}
+    ${mobileTwo({ width: "60%" })}
 
 `
 const ImageOne = styled.img`

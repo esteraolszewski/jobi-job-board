@@ -69,13 +69,15 @@ const Middle = styled.div`
     justify-content: space-between;
     width: 70%;
     padding: 100px 50px 40px 50px;
-   ${mobileTwo( { justifyContent: "center" })}
+   ${mobileTwo( { justifyContent: "center", paddingTop: "20px" })}
 `
 const LogoSection = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 30%;
+   ${mobileTwo( { alignItems: "center" })}
+
 `
 const Image = styled.img`
     width: 100px;

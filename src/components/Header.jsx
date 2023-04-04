@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import logo from "../../src/images/Logo.png";
 import img from '../../src/images/headeroption.jpg';
+import mobileImg from '../../src/images/mobileheader.jpg';
 import { UploadFile } from "@styled-icons/material-outlined/UploadFile";
 import "../index.css";
 import { desktop, laptop, tabletTwo, tablet, mobileTwo, mobile } from "../responsive";
+import { useState } from "react";
 
 const Container = styled.div`
     height: 100vh;
@@ -12,8 +14,10 @@ const Container = styled.div`
     background-position: center;
     display: flex;
     flex-direction: column;
-    ${mobileTwo( { backgroundImage: "none", backgroundColor: "#E0DCDB" })}
     
+    @media (max-width: 480px) {
+        background-image: url(${mobileImg});
+    }
 `
 // NAVBAR STYLES
 const Wrapper = styled.div`
@@ -25,9 +29,51 @@ const Wrapper = styled.div`
 const Title = styled.img` 
     
 `
+
+const StyledBurger = styled.div`
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 20;
+    cursor: pointer;
+
+    div {
+        width: 2rem;
+        height: 0.25rem;
+        background-color: ${({ open }) => open ? 'white' : '#333'};
+        border-radius: 10px;
+        transform-origin: 1px;
+        transition: all 0.3s linear;
+
+        &:nth-child(1) {
+            transform: ${({ open }) => open ? "rotate(45deg)" : "rotate(0)"};
+        }
+
+        &:nth-child(2) {
+            transform: ${({ open }) => open ? "translateX(100%)" : "translateX(0)"};
+            opacity: ${({ open }) => open ? "0" : "1"};
+        }
+
+        &:nth-child(3) {
+            transform: ${({ open }) => open ? "rotate(-45deg)" : "rotate(0)"};
+        }
+    }
+
+    ${tabletTwo( { display: "flex", justifyContent: "space-around", flexDirection: "column" })}
+`
+
 const Center = styled.div`
     display: flex;
     gap: 30px;
+    ${tabletTwo( { flexDirection: "column", backgroundColor: "#00BF58", position: "fixed", top: "0", right: "0", height: "100vh", width: "150px", padding: "70px 15px", zIndex: "10" })}
+
+    @media (max-width: 801px) {
+        transform: ${({ open }) => open ? "translateX(0)" : "translateX(100%)"};
+        transition: transform 0.3s ease-in-out;
+    }
 `
 const MenuItem = styled.a`
     font-size: 17px;
@@ -44,6 +90,8 @@ const Buttons = styled.div`
     display: flex;
     align-items: center;
     gap: 30px;
+    ${tabletTwo( { flexFlow: "column", display: "none" })}
+
 `
 const ItemA = styled.a`
     font-size: 17px;
@@ -90,7 +138,8 @@ const Slogan = styled.h1`
     margin: -110px 0 4px 0;
     ${laptop( { width: "70%" })}
     ${tabletTwo( { fontSize: "70px"})}
-    ${mobileTwo( { fontSize: "50px"})}
+    ${mobileTwo( { fontSize: "50px", color: "white", textShadow: "0px 4px 6px rgba(0,0,0,0.6)" })}
+    ${mobile( { fontSize: "40px"})}
 
 `
 const Subtitle = styled.h3`
@@ -99,8 +148,7 @@ const Subtitle = styled.h3`
     color: #050C24;
     margin-bottom: 70px;
     text-align: center;
-    ${mobileTwo( { fontSize: "20px"})}
-
+    ${mobileTwo( { fontSize: "20px", color: "white", textShadow: "0px 4px 6px rgba(0,0,0,0.6)"})}
 `
 
 const BlobA = styled.div`
@@ -247,13 +295,22 @@ const Icon = styled(UploadFile)`
 `
 
 const Header = () => {
+
+    const [open, setOpen] = useState(false)
+
     return (
         <Container>
              {/* NAVBAR  */}
              <Wrapper>
                 <Title src={logo}/>
-        
-                <Center>
+
+                <StyledBurger open={open} onClick={() => setOpen(!open)}>
+                    <div/>
+                    <div/>
+                    <div/>
+                </StyledBurger>
+
+                <Center open={open}>
                     <MenuItem>Home</MenuItem>
                     <MenuItem>Job</MenuItem>
                     <MenuItem>Explore</MenuItem>
