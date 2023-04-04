@@ -1,10 +1,13 @@
 import styled from "styled-components";
 import "../index.css";
 import React, { useState } from 'react';
+import { tabletTwo, mobileTwo } from "../responsive";
 
 
 const Container = styled.div`
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 const Header = styled.h2`
@@ -15,9 +18,10 @@ const List = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 345px;
+    width: 70%;
     background-color: #EFF6F3;
     border-radius: 10px;
+    ${tabletTwo( { width: "90%" })}
 `
 const Box = styled.div`
     display: flex;
@@ -26,6 +30,7 @@ const Box = styled.div`
     padding: 10px;
     margin: 20px;
     border-bottom: 1px #EBEBEB solid;
+    ${mobileTwo( { margin: "15px" })}
     
 `
 const Subtitle = styled.h3`
@@ -56,7 +61,7 @@ const CenterIt = styled.div`
 `
 const Bottom = styled.p`
     border: 1px solid #00BF58;
-    width: 320px;
+    width: 100%;
     text-align: center;
     margin: 50px 0 90px 0;
     padding: 6px 10px;

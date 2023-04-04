@@ -5,26 +5,34 @@ import { Twitter } from "@styled-icons/boxicons-logos/Twitter";
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin";
 import { Instagram } from "@styled-icons/boxicons-logos/Instagram";
 import { PinterestAlt } from "@styled-icons/boxicons-logos/PinterestAlt";
+import { desktop, laptop, tabletTwo, tablet, mobileTwo} from "../responsive";
 
 
 const Container = styled.div`
     padding: 40px 0 40px 0; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 `
 const Top = styled.div`
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 500px;
     align-items: center;
     border-top: 1px #EBEBEB solid;
     border-bottom: 1px #EBEBEB solid;
-    margin: 0 300px 0 300px;
+    width: 80%;
     padding: 40px 0 40px 0;
+    ${desktop( { gap: "100px" })}
+    ${laptop( { gap: "20px" })}
+
 `
 const Left = styled.div`
     display: flex;
     flex-direction: column;
 `
-
 const Header = styled.h2`
     font-size: 40px;
 `
@@ -58,13 +66,16 @@ const Post = styled.button`
 `
 const Middle = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 70%;
     padding: 100px 50px 40px 50px;
+   ${mobileTwo( { justifyContent: "center" })}
 `
 const LogoSection = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 30%;
 `
 const Image = styled.img`
     width: 100px;
@@ -75,10 +86,14 @@ const Email = styled.a`
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+    ${laptop( { fontSize: "15px" })}
+    ${tablet( { fontSize: "12px" })}
+
 `
 const Socials = styled.div`
     display: flex;
     gap: 10px;
+    
 `
 const FB = styled(Facebook)`
     color: #D6D6D6;
@@ -87,6 +102,7 @@ const FB = styled(Facebook)`
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
+
     &:hover{
         color: #00BF58;
         border-color: #00BF58;
@@ -99,6 +115,7 @@ const Twit = styled(Twitter)`
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
+
     &:hover{
         color: #00BF58;
         border-color: #00BF58;
@@ -111,6 +128,7 @@ const IN = styled(Linkedin)`
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
+
     &:hover{
         color: #00BF58;
         border-color: #00BF58;
@@ -120,16 +138,22 @@ const ListOne = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: -15px;
+    ${mobileTwo( { display: "none" })}
+
 `
 const ListTwo = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: -15px;
+    ${mobileTwo( { display: "none" })}
+
 `
 const ListThree = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: -15px;
+    ${mobileTwo( { display: "none" })}
+
 `
 const Title = styled.h3`
     font-size: 20px;
@@ -140,9 +164,12 @@ const Word = styled.p`
 `
 const Bottom = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    gap: 150px;
+    width: 70%;
+    ${tabletTwo( { width: "90%" })}
+    ${mobileTwo( { flexDirection: "column" })}
+
 `
 const A = styled.a`
     font-size: 14px;

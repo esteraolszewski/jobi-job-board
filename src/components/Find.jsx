@@ -4,6 +4,7 @@ import imgtwo from "../../src/images/workerTwo.jpg";
 import imgthree from "../../src/images/workerThree.jpg";
 import { ArrowIosDownward } from "@styled-icons/evaicons-solid/ArrowIosDownward";
 import React, { useState } from 'react';
+import { desktop, laptop, tablet, mobileTwo } from "../responsive";
 
 
 const Container = styled.div`
@@ -22,36 +23,59 @@ const ImagesContainer = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    ${mobileTwo( { display: "none" })}
+
 `
 const Circle = styled.div`
     background-color: #F7FAFF;
     width: 450px;
     height: 450px;
     border-radius: 50%;
+    position: absolute;
+    ${desktop( { width: "400px", height: "400px" })}
+    ${laptop( { width: "300px", height: "300px" })}
+    ${tablet( { display: "none" })}
+
 `
 const ImageOne = styled.img`
     width: 40%;
-    height: 55%;
+    height: 40%;
     object-fit: cover;
     position: absolute;
-    transform: translate(-155px, 105px);
+    left: 0;
+    top: 50%;
+    ${desktop( { height: "30%" })}
+    ${laptop( { width: "45%", height: "20%" })}
+    ${tablet( { width: "50%", height: "30%" })}
+
 `
 const ImageTwo = styled.img`
     width: 40%;
-    height: 55%;
+    height: 40%;
     object-fit: cover;
     position: absolute;
-    transform: translate(120px, 9px);
+    left: 50%;
+    ${desktop( { height: "30%" })}
+    ${laptop( { width: "45%", height: "20%" })}
+    ${tablet( { width: "50%", height: "30%", left: "60%" })}
+
 `
 const ImageThree = styled.img`
     width: 30%;
     height: 35%;
     object-fit: cover;
     position: absolute;
-    transform: translate(-140px, -175px);
+    left: 12%;
+    top: 5%;
+    ${desktop( { height: "25%", width: "30%", top: "15%" })}
+    ${laptop( { width: "45%", height: "20%", top: "25%", left: "0" })}
+    ${tablet( { width: "55%", height: "20%" })}
+
 `
 const TextContainer = styled.div`
     width: 22%;
+    ${laptop( { width: "45%" })}
+    ${mobileTwo( { width: "80%" })}
     
 `
 const Top = styled.p`
